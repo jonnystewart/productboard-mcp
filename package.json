@@ -1,0 +1,37 @@
+{
+  "name": "productboard-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing tools to interact with the ProductBoard API v2",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "exports": {
+    ".": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.2.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.22.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2"
+  }
+}
